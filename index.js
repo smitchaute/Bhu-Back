@@ -14,7 +14,7 @@ app.get('/assigned-count', async (req, res) => {
             },
             auth: {
                 username: 'smitchaute2@gmail.com',
-                password: 'ATATT3xFfGF0um0jGAYZlP3R5O3RPZ-aoJYZ8gcz3IQH17jy98uQfpTW3Hxfsd5Q55waJmHuotNmtYWkWv1gfxI-0Geg-Y2U1a1wV8e5tHcvV08tRMNe9-yjQlXEXObl9PNJbpS7hexUy0tEHGAvu4M2XE8cWABbuur39uhI3q-QcbiGoW83yUk=DB5D5B3B',
+                password: 'ATATT3xFfGF07eUqjYxTrSgDbgC4uJvOMKwU6fC-uqNIfhmtne2ZEXKF0WZ58C1sqn55ijzufG3DetMCYlQal7aeH2CczDV9fY-mg6a0UT7IOP7eiI72LeUHSg-MGPKWXvPwj5pso6upXlH_zXy56Qi-llNpe3eDO9sPHf7rAdjt3fXvZrRXLMQ=4C91AD4C',
             },
         });
 
@@ -33,7 +33,7 @@ app.get('/unAssigned-count', async (req, res) => {
             },
             auth: {
                 username: 'smitchaute2@gmail.com',
-                password: 'ATATT3xFfGF0um0jGAYZlP3R5O3RPZ-aoJYZ8gcz3IQH17jy98uQfpTW3Hxfsd5Q55waJmHuotNmtYWkWv1gfxI-0Geg-Y2U1a1wV8e5tHcvV08tRMNe9-yjQlXEXObl9PNJbpS7hexUy0tEHGAvu4M2XE8cWABbuur39uhI3q-QcbiGoW83yUk=DB5D5B3B',
+                password: 'ATATT3xFfGF07eUqjYxTrSgDbgC4uJvOMKwU6fC-uqNIfhmtne2ZEXKF0WZ58C1sqn55ijzufG3DetMCYlQal7aeH2CczDV9fY-mg6a0UT7IOP7eiI72LeUHSg-MGPKWXvPwj5pso6upXlH_zXy56Qi-llNpe3eDO9sPHf7rAdjt3fXvZrRXLMQ=4C91AD4C',
             },
         });
 
