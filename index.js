@@ -1,11 +1,11 @@
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
+const env = require("./env.json")
 
 const app = express();
 app.use(cors());
 const port = 3001;
-
 app.get('/assigned-count', async (req, res) => {
     try {
         const jiraResponse = await axios.get('https://smitchaute.atlassian.net/rest/api/2/search', {
@@ -14,7 +14,7 @@ app.get('/assigned-count', async (req, res) => {
             },
             auth: {
                 username: 'smitchaute2@gmail.com',
-                password: 'ATATT3xFfGF0lnkRzx9_LzWH5BJ-qlrN7dGzkGgSi9k1NPBYoufZOa6T0HR7vk2BaxDhfJYLpxucXW4w9khyeTNxgsHl10kLSCimk62cQbLhhZoW5EoCd2c5k1SjmUi04AgkqcpJ5FPfn1WepEdHSGEw3NWI549S-ar14ynsMsCC22zmUgDpSeM=71D3E72F',
+                password: env.token
             },
         });
 
