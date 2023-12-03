@@ -8,34 +8,32 @@ const port = 3001;
 
 app.get('/assigned-count', async (req, res) => {
     try {
-        // Replace 'yourJiraInstance' and 'yourJiraProjectKey' with your Jira instance and project details
         const jiraResponse = await axios.get('https://smitchaute.atlassian.net/rest/api/2/search', {
             params: {
                 jql: 'assignee=currentuser() AND project=KAN',
             },
             auth: {
                 username: 'smitchaute2@gmail.com',
-                password: 'ATATT3xFfGF0vyc865tDYB2Ty3dREZdd58QS01E0xphLybZ8NkfovTAcrMg4nSfl9FL1yAsgz1Ws5l2txeyVqfifwY6BKKX9U8AnRQ4Sg-p9f_GpnnLrVSwMhqmQU0S4IsEYaqWOW9k_dLbwMcD-4rhyMfJ4k8N1UOUDUFNKz08tlIjriqZrIt0=FBF9E8A9',
+                password: 'ATATT3xFfGF0srVGSInc8QyZ4crjxnI8S2B-xVpBa7PLQ0JYd2i0onyg5wWIVdTwl_uZ7De8qykM1GxcYGqm8l0zfXBGbpee4fyOm5VXuEy7krBeS4n7lcrhBoau5CUFo8lDtLOcnoCyV3_gAbCWnZzhHrND08-8STI4EIj6MTcirKmMYKxaJqw=5E6AFAAB',
             },
         });
 
         const assignedCount = jiraResponse.data.total;
         res.json({ count: assignedCount });
     } catch (error) {
-        console.error('Error fetching assigned count from Jira:', error.message);
+        console.error('Error fetching assigned count from Jira:', error);
         res.status(500).json({ error: 'Failed to fetch assigned count from Jira' });
     }
 });
 app.get('/unAssigned-count', async (req, res) => {
     try {
-        // Replace 'yourJiraInstance' and 'yourJiraProjectKey' with your Jira instance and project details
         const jiraResponse = await axios.get('https://smitchaute.atlassian.net/rest/api/2/search', {
             params: {
                 jql: 'assignee=null AND project=KAN',
             },
             auth: {
                 username: 'smitchaute2@gmail.com',
-                password: 'ATATT3xFfGF0vyc865tDYB2Ty3dREZdd58QS01E0xphLybZ8NkfovTAcrMg4nSfl9FL1yAsgz1Ws5l2txeyVqfifwY6BKKX9U8AnRQ4Sg-p9f_GpnnLrVSwMhqmQU0S4IsEYaqWOW9k_dLbwMcD-4rhyMfJ4k8N1UOUDUFNKz08tlIjriqZrIt0=FBF9E8A9',
+                password: 'ATATT3xFfGF0srVGSInc8QyZ4crjxnI8S2B-xVpBa7PLQ0JYd2i0onyg5wWIVdTwl_uZ7De8qykM1GxcYGqm8l0zfXBGbpee4fyOm5VXuEy7krBeS4n7lcrhBoau5CUFo8lDtLOcnoCyV3_gAbCWnZzhHrND08-8STI4EIj6MTcirKmMYKxaJqw=5E6AFAAB',
             },
         });
 
